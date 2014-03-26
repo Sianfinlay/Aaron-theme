@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<html lang="{block:English}en{/block:English}{block:French}fr{/block:French}{block:German}de{/block:German}{block:Japanese}ja{/block:Japanese}{block:Italian}it{/block:Italian}{block:Spanish}es{/block:Spanish}{block:Polish}pl{/block:Polish}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>
+    {Title}
+    {block:IndexPage}{block:Description} &ndash; {PlaintextDescription}{/block:Description}{/block:IndexPage}
+    {block:PermalinkPage}{block:PostSummary} &ndash; {PlaintextPostSummary}{/block:PostSummary}{block:PermalinkPage}
+    {block:SearchPage} &ndash; {lang:Search results for SearchQuery}{/block:SearchPage}
+    </title>
+    {block:Description}
+    <meta name="description" content="{MetaDescription}">
+    {/block:Description}
+    {block:PermalinkPage}
+    {block:Posts}
+    {block:Date}
+    <link rel="canonical" href="{Permalink}">
+    <link rel="shortlink" href="{ShortURL}">
+    {/block:Date}
+    {/block:Posts}
+    {/block:PermalinkPage}
+    <!-- Development CSS -->
+    	<!-- a link to the external css -->
+    <!-- Font CSS -->
+    	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700|Play:700,400' rel='stylesheet' type='text/css'>
+    <!-- Fav Icons -->
+    <link rel="shortcut icon" href="{Favicon}">
+    <link rel="apple-touch-icon" href="{PortraitURL-128}">
+    <!-- RSS Feed -->
+    <link rel="alternate" type="application/rss+xml" href="{RSS}">
+    <!-- Feed / Social Usernames -->
+    <meta name="text:Google Analytics ID" content=""/>
+    <!-- Theme Options -->
+    <meta name="if:Enable Twitter Feed" content="0" />
+    <meta name="if:Enable Google Analytics" content="0" />
+    <!-- Theme CSS -->
+    <style>
+    	/*
+			highlight-color:		#f2992e;
+			hightlight-alt-color:	#c3700c;
+			background-color:		#ffffff;
+			heading-color:			#222222;
+			paragraphy-color:		#545454;
+			divider-color:			#ededed;
+			quote-div-color:		#cccccc;
+			post-dets-color:		#b8b8b8;
+			aside-p-color:			#8c8c8c;
+		*/
+
+      /* ==========================================================================
+         CSS Reset (http://meyerweb.com/eric/tools/css/reset/ v2.0)
+         ========================================================================== */
+	      html, body, div, span, applet, object, iframe,
+	      h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+	      a, abbr, acronym, address, big, cite, code,
+	      del, dfn, em, img, ins, kbd, q, s, samp,
+	      small, strike, strong, sub, sup, tt, var,
+	      b, u, i, center,
+	      dl, dt, dd, ol, ul, li,
+	      fieldset, form, label, legend,
+	      table, caption, tbody, tfoot, thead, tr, th, td,
+	      article, aside, canvas, details, embed,
+	      figure, figcaption, footer, header, hgroup,
+	      menu, nav, output, ruby, section, summary,
+	      time, mark, audio, video {
+	        margin: 0;
+	        padding: 0;
+	        vertical-align: baseline;
+	        border: 0;
+	        font: inherit;
+	        font-size: 100%;
+	      }
+	      article, aside, details, figcaption, figure,
+	      footer, header, hgroup, menu, nav, section {
+	        display: block;
+	      }
+	      body {
+	        line-height: 1;
+	      }
+	      ol, ul {
+	        list-style: none;
+	      }
+	      blockquote, q {
+	        quotes: none;
+	      }
+	      blockquote:before, blockquote:after,
+	      q:before, q:after {
+	        content: '';
+	        content: none;
+	      }
+	      table {
+	        border-spacing: 0;
+	        border-collapse: collapse;
+	      }
+	      * {
+	        -webkit-box-sizing: border-box;
+	        -moz-box-sizing:    border-box;
+	        box-sizing:         border-box;
+	      }
+      /* ==========================================================================
+         Base Typography
+         ========================================================================== */
+	      body {
+	      	background-color: #000;
+	      	font-family: 'Source Code Pro', arial, sans-serif;
+	      }
+	      h1, h2, h3, h4, h5, h6 {
+	      	font-weight: 700;
+	      	color: rgb(244,244,244)
+	      }
+	      h1 {
+	      	font-family: 'Play', arial, sans-serif;
+	      }
+	      p {
+	      	color: rgb(244,244,244);
+	      	margin-bottom: 23px;
+	      }
+	      ol, ul {
+	      	margin-bottom: 24px;
+	      }
+	      ul {
+	      	padding: 0 0 0 24px;
+	      }
+	      blockquote {
+	      	margin-bottom: 23px;
+	      	padding: 0 0 0 21px;
+	      	border-left: 2px solid #cccccc;
+	      }
+
+	      a {
+	      	color: #f2992e;
+	      	text-decoration: none;
+	      	border-bottom: 1px dotted #f2992e;
+	      }
+	      a:hover {
+	      	color: #c3700c;
+	      	border-bottom: 1px dotted #c3700c;
+	      }
+      /* ==========================================================================
+         Base Layout
+         ========================================================================== */
+         .wrapper {
+         	
+         }
+
+         aside {
+         	
+         }
+         main {
+         	
+         }
+
+	  /* ==========================================================================
+         Post Layout
+         ========================================================================== */
+         .post {
+         	
+         }
+         .post.text {
+
+         }
+         .post.audio {
+
+         }
+         .post .audio .tumblr_audio_player {
+         	
+         }
+         .post img {
+         	
+         }
+         .post footer .like_button, .post footer .reblog_button {
+         	
+         }
+         .post footer .reblog_button {
+         	
+         }
+         .post footer ul {
+         	
+         }
+         .post footer li {
+         	
+         }
+         .post footer .date, .post footer .notecount {
+         	
+         }
+         .post footer .tags {
+         	
+         }
+      /* ==========================================================================
+         Media Queries
+         ========================================================================== */
+	      @-ms-viewport { width: device-width; }
+	      @-o-viewport { width: device-width; }
+	      @viewport { width: device-width; }
+	      @media screen and (min-width:0px) {
+	      	.wrapper {
+
+	      	}
+	      	aside {
+	      		
+	      	}
+	      	main {
+	      		
+	      	}
+	      	.post {
+	      		
+	      	}
+	      	.post footer {
+	      		
+	      	}
+	      	.post footer ul {
+	      		
+	      	}
+	      }
+    </style>
+    <!-- Custom CSS -->
+    <style>
+    {CustomCSS}
+    </style>
+  </head>
+  <body>
+  	<div class="wrapper">
+  		<header>
+  			<aside class="menu">
+	  		<img src="{PortraitURL-128}" alt="{Title}">
+	  		{block:HasPages}
+	  		<h5>Pages</h5>
+	  		<ul>
+	  			{block:Pages}
+	  			<li><a href="{URL}">{label}</a></li>
+	  			{/block:Pages}
+	        </ul>
+	  		{/block:HasPages}
+	  		</aside>
+	  		<section class="blog-title">
+	  			<h1>{Title}</h1>
+	  			{block:Description}
+	  			<p>{Description}</p>
+	  			{/block:Description}
+	  		</section>
+  		</header>
+	  	
+
+	  	<main>
+	  		{block:Posts}
+	  			<article class="post {PostType}">
+
+	  				{block:Photo}
+					<img src="{PhotoURL-500}" alt="{PhotoAlt}">
+					{block:Caption}
+					{Caption}
+					{/block:Caption}
+	  				{/block:Photo}
+
+	  				{block:Text}
+					{block:Title}
+					<h2>{Title}</h2>
+					{/block:Title}
+					{Body}
+	  				{/block:Text}
+
+	  				{block:Quote}
+	  				<blockquote class="{Length}">
+	  					{Quote}
+	  				</blockquote>
+	  				{block:Source}
+	  				<p>{Source}</p>
+	  				{/block:Source}
+	  				{/block:Quote}
+
+	  				{block:Chat}
+	  				{block:Title}
+	  				<h2>{Title}</h2>
+	  				{/block:Title}
+	  				<ol>
+	  					{block:Lines}
+	  					<li class="{Alt}">
+	  						{block:Label}
+	  						<span>{Label}</span>
+	  						{/block:Label}
+	  						{line}
+	  					</li>
+	  					{/block:Lines}
+	  				</ol>
+	  				{/block:Chat}
+
+	  				{block:Audio}
+	  				{AudioEmbed}
+	  				{block:Caption}
+	  				{Caption}
+	  				{/block:Caption}
+	  				{/block:Audio}
+
+	  				{block:Video}
+	  				{VideoEmbed-500}
+	  				{block:Caption}
+	  				{Caption}
+	  				{/block:Caption}
+	  				{/block:Video}
+
+	  				{block:Link}
+	  				<h2><a href="{URL}" {Target}>{Name}</a></h2>
+	  				{block:Description}
+	  				{Description}
+	  				{/block:Description}
+	  				{block:Link}
+
+	  				{block:Photoset}
+	  					{Photoset}
+	  					{block:Caption}
+	  						{Caption}
+	  					{/block:Caption}
+	  				{/block:Photoset}
+
+	  				{block:Answer}
+	  					<div class="question">
+	  						<div class="asker">{Asker}</div>
+	  						<div class="asker-question">{Question}</div>
+	  							<img src="{AskerPortaitURL-96}" alt="Asker's avatar">
+	  					</div>
+	  					{block:Answerer}
+	  						 <div class="answer"><div class="answerer">
+	  						 	{Answerer}
+	  						 </div>
+	  						 <div class="answerer-answer">{Answer}</div>
+	  						 	<img class="answerer-avatar" src="{AnswererPortraitURL-96}" alt="Answerer's avatar">
+	  						</div>
+	  					{/block:Answerer}
+	  				{/block:Answer}
+
+	  				<footer>
+	  					
+	  					<ul>
+	  						<li><a href="{Permalink}">Read More</a></li>
+	  						{block:Date}
+	  						<li class="date">{LikeButton}{ReblogButton}<a href="{Permalink}">{TimeAgo}</a></li>
+	  						{/block:Date}
+	  						{block:NoteCount}
+	  						<li class="notecount"><a href="{Permalink}#notes">Notes</a></li>
+	  						{block:NoteCount}
+	  						{block:HasTags}
+	  						<li>
+  							{block:Tags}
+  							<a href="{TagURL}">#{Tag}</a>
+  							{block:Tags}
+	  						</li>
+	  						{block:HasTags}
+	  					</ul>
+	  				</footer>
+
+	  				{block:PostNotes}
+	  				<section id="notes">
+	  					{PostNotes-64}
+	  				</section>
+	  				{/block:PostNotes}
+
+	  			</article>
+	  		{/block:Posts}
+
+	  		{block:Pagination}
+	  		<section class="pagination">
+	  			{block:PreviousPage}
+	  				<a href="{PreviousPage}">Prev Page</a>
+	  			{/block:PreviousPage}
+
+	  			{block:NextPage}
+	  				<a href="{NextPage}">Next Page</a>
+	  			{/block:NextPage}
+	  		</section>
+	  		{/block:Pagination}
+
+	  		<footer>
+	  			<p class="copyright">{CopyrightYears} {Title}</p>
+	  			<p class="tumblr">Powered By Tumblr</p>
+	  		</footer>
+  		</main>
+	</div>
+    {block:IfEnableTwitterFeed}
+    {block:Twitter}
+    <script type="text/javascript">
+        function recent_tweets(data) {
+          for (i=0; i<data.length; i++) {
+            document.getElementById("tweets").innerHTML =
+            document.getElementById("tweets").innerHTML +
+            '<a href="http://twitter.com/{TwitterUsername}/status/' +
+            (data[i].id_str ? data[i].id_str : data[i].id) +
+            '"><div class="content">' + data[i].text +
+            '</div></a>';
+          }
+          document.getElementById("twitter").style.display = 'block';
+        }
+    </script>
+    <script type="text/javascript" src="/tweets.js"></script>
+    {/block:Twitter}
+    {/block:IfEnableTwitterFeed}
+    {block:IfEnableGoogleAnalytics}
+    {block:IfGoogleAnalyticsID}
+    <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', '{GoogleAnalyticsID}']);
+        _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+    </script>
+    {/block:IfGoogleAnalyticsID}
+    {/block:IfEnableGoogleAnalytics}
+  </body>
+</html>
