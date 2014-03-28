@@ -39,17 +39,7 @@
     <meta name="if:Enable Google Analytics" content="0" />
     <!-- Theme CSS -->
     <style>
-    	/*
-			highlight-color:		#f2992e;
-			hightlight-alt-color:	#c3700c;
-			background-color:		#ffffff;
-			heading-color:			#222222;
-			paragraphy-color:		#545454;
-			divider-color:			#ededed;
-			quote-div-color:		#cccccc;
-			post-dets-color:		#b8b8b8;
-			aside-p-color:			#8c8c8c;
-		*/
+
 
       /* ==========================================================================
          CSS Reset (http://meyerweb.com/eric/tools/css/reset/ v2.0)
@@ -101,12 +91,23 @@
 	        -moz-box-sizing:    border-box;
 	        box-sizing:         border-box;
 	      }
+	      .clearfix:after {
+			visibility: hidden;
+			display: block;
+			font-size: 0;
+			content: " ";
+			clear: both;
+			height: 0;
+			}
+			* html .clearfix             { zoom: 1; } /* IE6 */
+			*:first-child+html .clearfix { zoom: 1; } /* IE7 */
       /* ==========================================================================
          Base Typography
          ========================================================================== */
 	      body {
-	      	background-color: #000;
+	      	background-color: rgba(9, 13, 27, 1.0);
 	      	font-family: 'Source Code Pro', arial, sans-serif;
+	      	color: rgba(255, 255, 255, 1.0);
 	      }
 	      h1, h2, h3, h4, h5, h6 {
 	      	font-weight: 700;
@@ -115,15 +116,24 @@
 	      h1 {
 	      	font-family: 'Play', arial, sans-serif;
 	      }
+	      h2, h3, h4, h5, h6 {
+	      	font-family: 'Source Code Pro', arial, sans-serif;
+	      }
+	      h2 {
+	      	margin-bottom: 15px;
+	      	font-size: 3rem;
+	      	line-height: 38px;
+	      }
 	      p {
-	      	color: rgb(244,244,244);
+	      	color: rgba(167, 203, 246, 1.0);
 	      	margin-bottom: 23px;
+	      	line-height: 25px;
 	      }
 	      ol, ul {
-	      	margin-bottom: 24px;
+
 	      }
 	      ul {
-	      	padding: 0 0 0 24px;
+
 	      }
 	      blockquote {
 	      	margin-bottom: 23px;
@@ -132,33 +142,89 @@
 	      }
 
 	      a {
-	      	color: #f2992e;
+	      	color: #fff;
 	      	text-decoration: none;
-	      	border-bottom: 1px dotted #f2992e;
 	      }
 	      a:hover {
-	      	color: #c3700c;
-	      	border-bottom: 1px dotted #c3700c;
+	      	color: #949494;
+	      	border-bottom: 1px dotted #949494;
+	      }
+	      img {
+
 	      }
       /* ==========================================================================
          Base Layout
          ========================================================================== */
          .wrapper {
-         	
+         	max-width: 1000px;
+         	margin: 0 auto 0 auto;
+         	border: rgba(255, 255, 255, 1.0) solid 2px;
          }
-
+         header {
+         	max-width: 1000px;
+         	min-height: 600px;
+         	border: rgba(255, 255, 255, 1.0) solid 2px;
+         }
          aside {
-         	
+         	min-width: 200px;
+         	min-height: 600px;
+         	border-right: rgba(255, 255, 255, 1.0) solid 2px;
+         	float: left;
+         }
+         aside .avatar {
+         	margin: 52px  45px 0 28px;
+         }
+         aside .pages {
+         	margin: 58px 0 0 0;
+         }
+         aside .pages li {
+         	padding: 13px 0 15px 28px;
+         	border-bottom: rgba(255, 255, 255, 1.0) 2px solid;
+         }
+         aside .pages li:first-child {
+         	border-top: rgba(255, 255, 255, 1.0) 2px solid;
+         }
+         .blog-title {
+          	max-width: 750px;
+         	padding: 77px 24px 0 24px;
+         	float: left;
+         }
+         .blog-desc {
+         	max-width: 667px;
+         }
+         section h1 {
+         	font-size: 9.72312rem;
          }
          main {
-         	
+         	padding: 10px;
+         }
+         .end {
+         	text-align: center;
+         	font-size: 0.75rem;
+         }
+         .end p {
+         	margin-top: 28px;
+         	color: rgba(212, 212, 212, 1.0);
+         }
+         .divider {
+         	color: rgba(255, 255, 255, 1.0);
+         	margin: 63px auto 40px auto;
+			clear: both;
+         }
+         .pagination {
+         	margin-top: 63px;
          }
 
 	  /* ==========================================================================
          Post Layout
          ========================================================================== */
          .post {
-         	
+         	margin-top: 77px;
+         	margin-bottom: 70px;
+         	max-width: 685px;
+         }
+         .post .body {
+         	margin-top: 48px;
          }
          .post.text {
 
@@ -166,26 +232,44 @@
          .post.audio {
 
          }
+         .post .quote section {
+         	clear: both;
+         }
+       	 .quote-body p {
+         	font-family: 'Play', arial, sans-serif;
+         	font-size: 1.625rem;
+         	color: rgba(114, 192, 237, 1.0);
+         	text-align: center;
+         	line-height: 2.625rem;
+         }
+         .quote-author p {
+         	float: right;
+         	clear: both;
+         }
          .post .audio .tumblr_audio_player {
          	
          }
          .post img {
-         	
+         	width: 100%;
+	      	height: auto;
+         }
+         .post footer .readmore, .post footer .notecount {
+         	text-decoration: underline;
          }
          .post footer .like_button, .post footer .reblog_button {
-         	
+         	float: left;
          }
-         .post footer .reblog_button {
-         	
+         .post footer .like_button {
+         	margin-right: 15px;
          }
          .post footer ul {
          	
          }
          .post footer li {
-         	
+         	margin-bottom: 16px;
          }
-         .post footer .date, .post footer .notecount {
-         	
+         .post footer .date {
+         	margin-left: 10px;
          }
          .post footer .tags {
          	
@@ -224,22 +308,21 @@
   </head>
   <body>
   	<div class="wrapper">
-  		<header>
+  		<header class="clearfix">
   			<aside class="menu">
-	  		<img src="{PortraitURL-128}" alt="{Title}">
+	  		<img src="{PortraitURL-128}" alt="{Title}" class="avatar">
 	  		{block:HasPages}
-	  		<h5>Pages</h5>
-	  		<ul>
+	  		<ul class="pages">
 	  			{block:Pages}
 	  			<li><a href="{URL}">{label}</a></li>
 	  			{/block:Pages}
 	        </ul>
 	  		{/block:HasPages}
 	  		</aside>
-	  		<section class="blog-title">
+	  		<section class="blog-title clearfix">
 	  			<h1>{Title}</h1>
 	  			{block:Description}
-	  			<p>{Description}</p>
+	  			<p class="blog-desc">{Description}</p>
 	  			{/block:Description}
 	  		</section>
   		</header>
@@ -252,7 +335,9 @@
 	  				{block:Photo}
 					<img src="{PhotoURL-500}" alt="{PhotoAlt}">
 					{block:Caption}
+					<div class="body">
 					{Caption}
+					</div>
 					{/block:Caption}
 	  				{/block:Photo}
 
@@ -260,16 +345,27 @@
 					{block:Title}
 					<h2>{Title}</h2>
 					{/block:Title}
+					<div class="body">
 					{Body}
+					</div>
 	  				{/block:Text}
 
 	  				{block:Quote}
-	  				<blockquote class="{Length}">
-	  					{Quote}
-	  				</blockquote>
-	  				{block:Source}
-	  				<p>{Source}</p>
-	  				{/block:Source}
+	  				<section class="clearfix">
+	  					<div class="quote-body">
+	  						<p class="{Length}">
+	  							&ldquo; {Quote} &rdquo;
+	  						</p>
+	  					</div>
+	  				
+	  					{block:Source}
+	  					<div class="quote-author">
+	  						<p>-{Source}</p>
+	  					</div>
+	  				
+	  					{/block:Source}
+	  				</section>
+	  				
 	  				{/block:Quote}
 
 	  				{block:Chat}
@@ -298,21 +394,27 @@
 	  				{block:Video}
 	  				{VideoEmbed-500}
 	  				{block:Caption}
+	  				<div class="body">
 	  				{Caption}
+	  				</div>
 	  				{/block:Caption}
 	  				{/block:Video}
 
 	  				{block:Link}
 	  				<h2><a href="{URL}" {Target}>{Name}</a></h2>
 	  				{block:Description}
+	  				<div class="body">
 	  				{Description}
+	  				</div>
 	  				{/block:Description}
 	  				{block:Link}
 
 	  				{block:Photoset}
 	  					{Photoset}
 	  					{block:Caption}
+	  						<div class="body">
 	  						{Caption}
+	  						</div>
 	  					{/block:Caption}
 	  				{/block:Photoset}
 
@@ -335,9 +437,9 @@
 	  				<footer>
 	  					
 	  					<ul>
-	  						<li><a href="{Permalink}">Read More</a></li>
+	  						<li class="readmore"><a href="{Permalink}">Read More</a></li>
 	  						{block:Date}
-	  						<li class="date">{LikeButton}{ReblogButton}<a href="{Permalink}">{TimeAgo}</a></li>
+	  						<li>{LikeButton}{ReblogButton}<span class="date"><a href="{Permalink}">_{DayOfMonthWithZero}/{MonthNumberWithZero}/{ShortYear}</a></span></li>
 	  						{/block:Date}
 	  						{block:NoteCount}
 	  						<li class="notecount"><a href="{Permalink}#notes">Notes</a></li>
@@ -357,28 +459,27 @@
 	  					{PostNotes-64}
 	  				</section>
 	  				{/block:PostNotes}
-
+	  				<div class="divider">//////////////////////////////////////////////////////////////////</div>
 	  			</article>
 	  		{/block:Posts}
 
 	  		{block:Pagination}
-	  		<section class="pagination">
-	  			{block:PreviousPage}
-	  				<a href="{PreviousPage}">Prev Page</a>
-	  			{/block:PreviousPage}
+	  			<section class="pagination">
+	  			{block:JumpPagination length="5"}{block:CurrentPage}
+                    <span class="current_page">{PageNumber}</span>
+                {/block:CurrentPage}{block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a>
+                {/block:JumpPage}{/block:JumpPagination}
+	  			</section>
+            {/block:Pagination}
 
-	  			{block:NextPage}
-	  				<a href="{NextPage}">Next Page</a>
-	  			{/block:NextPage}
-	  		</section>
-	  		{/block:Pagination}
-
-	  		<footer>
-	  			<p class="copyright">{CopyrightYears} {Title}</p>
-	  			<p class="tumblr">Powered By Tumblr</p>
-	  		</footer>
+	  		
   		</main>
+  		
 	</div>
+	<footer class="end">
+	  	<p class="copyright">{CopyrightYears} {Title}</p>
+	 </footer>
     {block:IfEnableTwitterFeed}
     {block:Twitter}
     <script type="text/javascript">
