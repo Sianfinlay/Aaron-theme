@@ -10,3 +10,4 @@ Progress Currently
 ---------------------------
 
 -	Theme can post post; text, audio, video, chat, quotes and links. 
+-	basic style added
