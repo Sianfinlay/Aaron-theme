@@ -26,7 +26,7 @@
     <!-- Development CSS -->
     	<!-- a link to the external css -->
     <!-- Font CSS -->
-    	<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:300,400,600,700|Play:700,400' rel='stylesheet' type='text/css'>
+    	<link href='http://fonts.googleapis.com/css?family=Cousine:400,700,400italic,700italic|Play:700,400' rel='stylesheet' type='text/css'>
     <!-- Fav Icons -->
     <link rel="shortcut icon" href="{Favicon}">
     <link rel="apple-touch-icon" href="{PortraitURL-128}">
@@ -106,18 +106,19 @@
          ========================================================================== */
 	      body {
 	      	background-color: rgba(9, 13, 27, 1.0);
-	      	font-family: 'Source Code Pro', arial, sans-serif;
+	      	font-family: 'Cousine', Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+	      	font-size: 16px;
 	      	color: rgba(255, 255, 255, 1.0);
 	      }
 	      h1, h2, h3, h4, h5, h6 {
 	      	font-weight: 700;
-	      	color: rgb(244,244,244)
+	      	color: rgb(244,244,244);
 	      }
 	      h1 {
 	      	font-family: 'Play', arial, sans-serif;
 	      }
 	      h2, h3, h4, h5, h6 {
-	      	font-family: 'Source Code Pro', arial, sans-serif;
+	      	font-family: 'Cousine', Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
 	      }
 	      h2 {
 	      	margin-bottom: 15px;
@@ -125,9 +126,11 @@
 	      	line-height: 38px;
 	      }
 	      p {
+	      	font-size: 1rem;
 	      	color: rgba(167, 203, 246, 1.0);
 	      	margin-bottom: 23px;
-	      	line-height: 25px;
+	      	line-height: 30px;
+	      	letter-spacing: 0.4px;
 	      }
 	      ol, ul {
 
@@ -145,90 +148,119 @@
 	      	color: #fff;
 	      	text-decoration: none;
 	      }
-	      a:hover {
+	       a:hover {
 	      	color: #949494;
-	      	border-bottom: 1px dotted #949494;
 	      }
-	      img {
-
-	      }
+	      main > article.post.video > iframe {
+    		width: 100%;
+		 }
       /* ==========================================================================
          Base Layout
          ========================================================================== */
          .wrapper {
          	max-width: 1000px;
          	margin: 0 auto 0 auto;
-         	border: rgba(255, 255, 255, 1.0) solid 2px;
          }
          header {
          	max-width: 1000px;
-         	min-height: 600px;
-         	border: rgba(255, 255, 255, 1.0) solid 2px;
+         	min-height: 300px;
+         	border-bottom: rgba(211, 232, 251, 0.6) solid 2px;
          }
          aside {
          	min-width: 200px;
-         	min-height: 600px;
-         	border-right: rgba(255, 255, 255, 1.0) solid 2px;
+         	min-height: 550px;
+         	max-height: 800px;
+         	border-right: rgba(211, 232, 251, 0.6) solid 2px;
          	float: left;
          }
          aside .avatar {
          	margin: 52px  45px 0 28px;
+         }
+         .avatar a:hover {
+         	border: none;
          }
          aside .pages {
          	margin: 58px 0 0 0;
          }
          aside .pages li {
          	padding: 13px 0 15px 28px;
-         	border-bottom: rgba(255, 255, 255, 1.0) 2px solid;
+         	border-bottom: rgba(211, 232, 251, 0.6) 2px solid;
          }
          aside .pages li:first-child {
-         	border-top: rgba(255, 255, 255, 1.0) 2px solid;
+         	border-top: rgba(211, 232, 251, 0.6) 2px solid;
+         }
+         aside .pages li:last-child {
+         	border-bottom: none;
+         }
+         aside .pages li a:hover {
+             border-bottom: 1px dotted #949494;
          }
          .blog-title {
           	max-width: 750px;
-         	padding: 77px 24px 0 24px;
+         	padding: 36px 24px 0 24px;
          	float: left;
          }
+         .blog-title a {
+         	color: rgb(244,244,244);
+         }
          .blog-desc {
+         	margin: 30px 0 10px 0;
          	max-width: 667px;
          }
          section h1 {
-         	font-size: 9.72312rem;
+         	font-size: 5.72312rem;
+         	font-weight: 400;
          }
          main {
          	padding: 10px;
          }
+         body > div.wrapper > main > article {
+    		margin: 77px auto 70px auto;
+		 }
          .end {
          	text-align: center;
-         	font-size: 0.75rem;
          }
          .end p {
+         	font-size: 0.75rem;
          	margin-top: 28px;
          	color: rgba(212, 212, 212, 1.0);
          }
-         .divider {
-         	color: rgba(255, 255, 255, 1.0);
+         .divider:before {
+         	color: rgba(211, 232, 251, 0.4);
          	margin: 63px auto 40px auto;
 			clear: both;
+			content: "////////////////////////////////////////////////////////////////////";
          }
          .pagination {
          	margin-top: 63px;
+         	text-align: center;
          }
 
 	  /* ==========================================================================
          Post Layout
          ========================================================================== */
          .post {
-         	margin-top: 77px;
-         	margin-bottom: 70px;
          	max-width: 685px;
          }
-         .post .body {
+         .post a:hover {
+             border-bottom: 1px dotted #949494;
+         }
+         article.post.text > div.body {
          	margin-top: 48px;
-         }
-         .post.text {
-
-         }
+			margin-bottom: 46px;
+			text-align: justify;
+			overflow: hidden;
+		 }
+		 article.post.text > div.body > p:last-child {
+   			text-align: left;
+		 }
+		 .post.chat > ol > li {
+		    color: rgba(167, 203, 246, 1.0);
+		    padding: 10px 0 0 0;
+		 }
+		.post.chat > ol {
+    		margin-bottom: 40px;
+		 }
          .post.audio {
 
          }
@@ -250,9 +282,13 @@
          	
          }
          .post img {
+         	margin-bottom: 20px;
          	width: 100%;
 	      	height: auto;
          }
+         .photoset {
+    		margin-bottom: 20px;
+		 }
          .post footer .readmore, .post footer .notecount {
          	text-decoration: underline;
          }
@@ -263,7 +299,7 @@
          	margin-right: 15px;
          }
          .post footer ul {
-         	
+         	margin-bottom: 63px;
          }
          .post footer li {
          	margin-bottom: 16px;
@@ -274,6 +310,16 @@
          .post footer .tags {
          	
          }
+         #notes > ol > li.note {
+    		line-height: 30px;
+		 }
+         #notes > ol > li.note a > img {
+    		width: 0px;
+		 }
+
+		 #notes > ol > li.note > span > a {
+    		color: rgba(149, 208, 246, 1.0);
+		 }
       /* ==========================================================================
          Media Queries
          ========================================================================== */
@@ -310,7 +356,7 @@
   	<div class="wrapper">
   		<header class="clearfix">
   			<aside class="menu">
-	  		<img src="{PortraitURL-128}" alt="{Title}" class="avatar">
+	  		<a href="/"><img src="{PortraitURL-128}" alt="{Title}" class="avatar"></a>
 	  		{block:HasPages}
 	  		<ul class="pages">
 	  			{block:Pages}
@@ -320,7 +366,7 @@
 	  		{/block:HasPages}
 	  		</aside>
 	  		<section class="blog-title clearfix">
-	  			<h1>{Title}</h1>
+	  			<a href="/"><h1>{Title}</h1></a>
 	  			{block:Description}
 	  			<p class="blog-desc">{Description}</p>
 	  			{/block:Description}
@@ -343,7 +389,7 @@
 
 	  				{block:Text}
 					{block:Title}
-					<h2>{Title}</h2>
+					<a href="{Permalink}" title="{Title}"><h2>{Title}</h2></a>
 					{/block:Title}
 					<div class="body">
 					{Body}
@@ -370,7 +416,7 @@
 
 	  				{block:Chat}
 	  				{block:Title}
-	  				<h2>{Title}</h2>
+	  				<a href="{Permalink}" title="{Title}"><h2>{Title}</h2></a>
 	  				{/block:Title}
 	  				<ol>
 	  					{block:Lines}
@@ -437,7 +483,6 @@
 	  				<footer>
 	  					
 	  					<ul>
-	  						<li class="readmore"><a href="{Permalink}">Read More</a></li>
 	  						{block:Date}
 	  						<li>{LikeButton}{ReblogButton}<span class="date"><a href="{Permalink}">_{DayOfMonthWithZero}/{MonthNumberWithZero}/{ShortYear}</a></span></li>
 	  						{/block:Date}
@@ -459,7 +504,7 @@
 	  					{PostNotes-64}
 	  				</section>
 	  				{/block:PostNotes}
-	  				<div class="divider">//////////////////////////////////////////////////////////////////</div>
+	  				<div class="divider"></div>
 	  			</article>
 	  		{/block:Posts}
 
@@ -476,6 +521,8 @@
 	  		
   		</main>
   		
+
+
 	</div>
 	<footer class="end">
 	  	<p class="copyright">{CopyrightYears} {Title}</p>
