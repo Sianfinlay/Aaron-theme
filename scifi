@@ -195,21 +195,12 @@
          aside .pages li a:hover {
              border-bottom: 1px dotted #949494;
          }
-         .blog-title {
-          	max-width: 750px;
-         	padding: 36px 24px 0 24px;
-         	float: left;
-         }
          .blog-title a {
          	color: rgb(244,244,244);
          }
          .blog-desc {
          	margin: 30px 0 10px 0;
          	max-width: 667px;
-         }
-         section h1 {
-         	font-size: 5.72312rem;
-         	font-weight: 400;
          }
          main {
          	padding: 10px;
@@ -224,12 +215,6 @@
          	font-size: 0.75rem;
          	margin-top: 28px;
          	color: rgba(212, 212, 212, 1.0);
-         }
-         .divider:before {
-         	color: rgba(211, 232, 251, 0.4);
-         	margin: 63px auto 40px auto;
-			clear: both;
-			content: "////////////////////////////////////////////////////////////////////";
          }
          .pagination {
          	margin-top: 63px;
@@ -326,25 +311,175 @@
 	      @-ms-viewport { width: device-width; }
 	      @-o-viewport { width: device-width; }
 	      @viewport { width: device-width; }
-	      @media screen and (min-width:0px) {
-	      	.wrapper {
-
+	      @media screen and (min-width:954px) {
+	      	.blog-title {
+	          	max-width: 750px;
+	         	padding: 36px 24px 0 24px;
+	         	float: left;
+	         }
+	         section h1 {
+	         	font-size: 5.72312rem;
+	         	font-weight: 400;
+         	 }
+	         aside {
+	         	min-width: 200px;
+	         	min-height: 550px;
+	         	max-height: 800px;
+	         	border-right: rgba(211, 232, 251, 0.6) solid 2px;
+	         	float: left;
+         	 }
+	         aside .avatar {
+	         	margin: 52px  45px 0 28px;
+	         }
+	         .avatar a:hover {
+	         	border: none;
+	         }
+	         aside .pages {
+	         	margin: 58px 0 0 0;
+	         }
+	         aside .pages li {
+	         	padding: 13px 0 15px 28px;
+	         	border-bottom: rgba(211, 232, 251, 0.6) 2px solid;
+	         }
+	         aside .pages li:first-child {
+	         	border-top: rgba(211, 232, 251, 0.6) 2px solid;
+	         }
+	         aside .pages li:last-child {
+	         	border-bottom: none;
+	         }
+	         aside .pages li a:hover {
+	             border-bottom: 1px dotted #949494;
+	         }
+	         .divider:before {
+	         	color: rgba(211, 232, 251, 0.4);
+	         	margin: 63px auto 40px auto;
+				clear: both;
+				content: "////////////////////////////////////////////////////////////////////";
+	         }
+	      }
+	      @media screen and (max-width:953px) {
+	      	.blog-title {
+	      		max-width: 70%;
+	      		padding: 36px 24px 0 24px;
+	         	float: left;
 	      	}
-	      	aside {
-	      		
+	      	section h1 {
+	         	font-size: 5.72312rem;
+	         	font-weight: 400;
+         	 }
+         	.divider:before {
+	         	color: rgba(211, 232, 251, 0.4);
+	         	margin: 63px auto 40px auto;
+				clear: both;
+				content: "////////////////////////////////////////////////////////////////////";
+	         }
+	      }
+	      @media screen and (max-width: 862px){
+	      	.blog-title {
+	          	max-width: 100%;
+	         	padding: 36px 24px 0 24px;
+	         	float: left;
+	         }
+	         section h1 {
+	         	font-size: 5.72312rem;
+	         	font-weight: 400;
+         	 }
+	         aside {
+	         	min-width: 100%;
+	         	min-height: 0;
+	         	max-height: 800px;
+	         	border: rgba(211, 232, 251, 0.6) solid 2px;
+	         	float: left;
+         	 }
+	         aside .avatar {
+	         	margin: 0;
+	         	float: left;
+	         	width: 50px;
+	         }
+	         .avatar a:hover {
+	         	border: none;
+	         }
+	         aside .pages {
+	         	margin: 0;
+	         }
+	         aside .pages li {
+	         	padding: 17px 0 15px 28px;
+	         	border-bottom: none;
+	         }
+	         aside > ul {
+	         	display: flex;
+	         }
+	         aside .pages li:first-child {
+	         	border: none;
+	         }
+	         aside .pages li:last-child {
+	         	border-bottom: none;
+	         }
+	         aside .pages li a:hover {
+	             border-bottom: 1px dotted #949494;
+	         }
+	         .divider:before {
+	         	color: rgba(211, 232, 251, 0.4);
+	         	margin: 63px auto 40px auto;
+				clear: both;
+				content: "////////////////////////////////////////////////////////////////////";
+	         }
+	      }
+	      @media screen and (max-width: 690px){
+	      	section h1 {
+	         	font-size: 4.42312rem;
+	         	font-weight: 400;
+         	 }
+         	.divider:before {
+	         	color: rgba(211, 232, 251, 0.4);
+	         	margin: 63px auto 40px auto;
+				clear: both;
+				content: "///////////////////////////////////////////////////////";
+	         }
+	      }
+	      @media screen and (max-width: 630px){
+	      	section h1 {
+	         	font-size: 4.42312rem;
+	         	font-weight: 400;
+         	 }
+         	.divider:before {
+	         	color: rgba(211, 232, 251, 0.4);
+	         	margin: 63px auto 40px auto;
+				clear: both;
+				content: "///////////////////////////////////////////////////////";
+	         }
+	      }
+	      @media screen and (max-width: 570px){
+	      	.divider:before {
+	         	color: rgba(211, 232, 251, 0.4);
+	         	margin: 63px auto 40px auto;
+				clear: both;
+				content: "////////////////////////////////////////////";
+	         }
+	      }
+	      @media screen and (max-width: 500px){
+	      	section h1 {
+	      		font-size: 3.4312rem;
+	      		font-weight: 400;
 	      	}
-	      	main {
-	      		
+	      	.divider:before {
+	         	color: rgba(211, 232, 251, 0.4);
+	         	margin: 63px auto 40px auto;
+				clear: both;
+				content: "////////////////////////////////////////////";
+	         }
+	      }
+	      @media screen and (max-width: 460px){
+	      	section h1 {
+	      		font-size: 3.4312rem;
+	      		font-weight: 400;
 	      	}
-	      	.post {
-	      		
-	      	}
-	      	.post footer {
-	      		
-	      	}
-	      	.post footer ul {
-	      		
-	      	}
+	      	.divider:before {
+	         	color: rgba(211, 232, 251, 0.4);
+	         	margin: 63px auto 40px auto;
+				clear: both;
+				content: "/////////////////////////////////////";
+	         }
 	      }
     </style>
     <!-- Custom CSS -->
